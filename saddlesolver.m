@@ -1,0 +1,6 @@
+function [xstar,ystar] = saddlesolver(a,b,x0,y0,eta,gamma)
+xstar = (a*eta+b*eta+2*a*eta*gamma+x0+gamma*x0-eta*y0)/ ...
+    (1+eta+gamma+2*eta*gamma);
+ystar = (-a*gamma+b*gamma+2*b*eta*gamma+gamma*x0+y0+eta*y0)/ ...
+    (1+eta+gamma+2*eta*gamma);
+end
